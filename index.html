@@ -1,12 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.1/quartz/bootstrap.min.css"
+        integrity="sha512-MtIFp1X1XW20+oDP5Px0yyJ2QuTXsiHqNQnNdC/haBRqVePWs1x7wn5YXpQ6+WWT5sqVawAw43r9hqnjcZ5XZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia5 Javascript</title>
-</head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item ">
+                        <button type="button" class="btn btn-secondary   me-3" id="btn1">Ejercicio 1</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-secondary  me-3" id="btn2">Ejercicio 2</button>
+
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-secondary   me-3" id="btn3">Ejercicio 3</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-sm xs">
+        <h1 class="text">Bienvenidos</h1>
+        <div class="row justify-content-md-center">
+            <div class="box">
+                <!--############################# Ejercicio 1 #####################################-->
+                <div class="ejercicio1" id="Ejercicio1" style="display:block;">
+                    <h2 class="text-center">Ejercicio 1</h2>
+                    <button type="button" id="mensaje1" class="btn btn-primary btn-sm b1">Mensaje</button>
+                    <form action="" id="form_1">
+                        <div class="mb-1">
+                            <label for="NumeroMultiplicar" class="form-label">Numero </label>
+                            <input class="form-control form-control-sm" id="NumMultiplicar" type="number"
+                                placeholder="Ingrese el numero a multiplicar">
+                        </div>
+                        <table class="tabla" id="tabla_mult">
+                            <thead>
+                                <tr>
+                                </tr>
+                            </thead>
+                            <tbody id="Table_multi"></tbody>
+                        </table>
+                        <button type="submit" class="btn btn-primary btn-sm mt-2">Calcular</button>
+                    </form>
+                </div>
+                <!--######################################### Ejercicio 2 #####################################-->
+                <div class="ejercicio2" id="Ejercicio2" style="display:none;">
+                    <h2 class="text-center">Ejercicio 2</h2>
+                    <button type="button" id="mensaje2" class="btn btn-primary btn-sm b1">Mensaje</button>
+                    <form id="form2">
+                        <div class="row justify-content-center mb-4">
+                            <div class="col-auto">
+                                <input class="form-control form-control-sm" id="valorproducto" required type="number"
+                                    placeholder="Valor del producto" aria-label=".form-control-sm example">
+                            </div>
+                        </div>
+                        <table class="tabla">
+                            <thead>
+                                <tr>
+                                    <th colspan="4" class="th">Factura Nº 0001 </th>
+                                </tr>
+                                <tr>
+                                    <th class="th">Id</th>
+                                    <th class="th">Valor produto</th>
+                                    <th class="th">Iva</th>
+                                </tr>
+                            </thead>
+                            <tbody id="Ventas">
+                            </tbody>
+                        </table>
+                        <div class="alert alert-primary mt-1" role="alert" id="res2">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm mt-2">Calcular</button>
+                        <button type="button" id="limpiar2" class="btn btn-primary btn-sm mt-2">Limpiar</button>
+                    </form>
+                </div>
+                <!--######################################### Ejercicio 3 #####################################-->
+                <div class="ejercicio3" id="Ejercicio3" style="display:none;">
+                    <h2 class="text-center">Ejercicio 3</h2>
+                    <button type="button" id="mensaje3" class="btn btn-primary btn-sm mb-1 b1">Mensaje</button>
+                    <div class="input-group">
+                        <select class="form-select" id="clasepizza">
+                            <option selected>Seleccione una opcion</option>
+                            <option value="1">Login</option>
+                            <option value="2">Pizza cencilla</option>
+                            <option value="3">Pizza especial</option>
+                        </select>
+                        <button class="btn btn-outline-secondary" type="button" id="pizzaElegir">Elegir</button>
+                    </div>
+                    <div id="imgpizza" style="">
+                        <img src="img/pizza.jpg" alt="" class="img-pizza">
+                    </div>
+                    <div id="pizzacencilla" style="display:none;">
+                        <form action="" id="form_3">
+                            <div class="box-juntas ">
+                                <div class="card me-4" id="PizzaG">
+                                    <div class="img-box">
+                                        <h6>Pizza Grande</h6>
+                                        <img src="img/grande2.jpg" class="img">
+                                    </div>
+                                    <h6>$40.000 COP</h6>
+                                    <input data-precio="40000" data-nombre="Pizza Grande" data-id="0"
+                                        class="form-control form-control-sm" id="valor_1" style="width:9em ;"
+                                        type="text" placeholder="Cantidad" name="valor_1">
+                                </div>
+                                <div class="card me-4">
+                                    <div class="img-box">
+                                        <h6>Pizza Mediana</h6>
+                                        <img src="img/mediana1.jpg" class="img">
+                                    </div>
+                                    <h6>$25.000 COP</h6>
+                                    <input data-precio="25000" data-nombre="Pizza Mediana" data-id="1"
+                                        class="form-control form-control-sm" id="valor_2" style="width:9em ;"
+                                        type="text" placeholder="Cantidad" name="valor_2">
+                                </div>
+                                <div class="card">
+                                    <div class="img-box">
+                                        <h6>Pizza Pequeña</h6>
+                                        <img src="img/pequeñas2.jpg" class="img">
+                                    </div>
+                                    <h6>$15.000 COP</h6>
+                                    <input data-precio="15000" data-nombre="Pizza Pequeña" data-id="2"
+                                        class="form-control form-control-sm" id="valor_3" style="width:9em ;"
+                                        type="text" placeholder="Cantidad" name="valor_3">
+                                </div>
+                            </div>
+                            <div class="alert alert-primary mt-1" role="alert" id="respizzae">
+                                <div>
+                                    <span></span><br>
+                                    <span></span><br>
+                                    <span></span><br>
+                                </div><br><br>
+                                <span></span>
+                            </div>
+                        </form>
+                    </div>
+                    <!--  Pizza Especial-->
+                    <div id="pizzaespecial" style="display:none;">
+                        <form action="" id="form_31">
+                            <div class="box-juntas1">
+                                <div class="card me-2" id="PizzaG">
+                                    <div class="img-box">
+                                        <h6>Pizza Grande</h6>
+                                        <img src="img/grande2.jpg" class="img">
+                                    </div>
+                                    <h6>$40.000 COP</h6>
+                                    <input data-precio="40000" data-nombre="Pizza Grande" data-id="0"
+                                        class="form-control form-control-sm" id="valor_1" style="width:9em ;"
+                                        type="number" placeholder="Cantidad">
+                                </div>
+                                <div class="card me-2">
+                                    <div class="img-box">
+                                        <h6>Pizza Mediana</h6>
+                                        <img src="img/mediana1.jpg" class="img">
+                                    </div>
+                                    <h6>$25.000 COP</h6>
+                                    <input data-precio="25000" data-nombre="Pizza Mediana" data-id="1"
+                                        class="form-control form-control-sm" id="valor_2" style="width:9em ;"
+                                        type="number" placeholder="Cantidad">
+                                </div>
+                                <div class="card me-2">
+                                    <div class="img-box">
+                                        <h6>Pizza Pequeña</h6>
+                                        <img src="img/pequeñas2.jpg" class="img">
+                                    </div>
+                                    <h6>$15.000 COP</h6>
+                                    <input data-precio="15000" data-nombre="Pizza Pequeña" data-id="2"
+                                        class="form-control form-control-sm" id="valor_3" style="width:9em ;"
+                                        type="number" placeholder="Cantidad">
+                                </div>
+                                <div class="card">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="camarones">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Camarones
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="pepinillo" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Pepinillo
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="tocineta" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Tocineta
+                                        </label>
+                                    </div>
+                                    <h6>Adicional</h6>
+                                    <ul class="lista-ul mb-3">
+                                        <li>$2500</li>
+                                    </ul>
+                                    <input class="form-control form-control-sm" id="valor1" style="width:9em ;"
+                                        type="text" placeholder="Cantidad">
+                                </div>
+                            </div>
+                            <div class="alert alert-primary mt-1" role="alert" id="respizzae">
+                                <div>
+                                    <span></span><br>
+                                    <span></span><br>
+                                    <span></span><br>
+                                </div><br><br>
+                                <span></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+        <script src="js/mostrar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
 </body>
+
 </html>
